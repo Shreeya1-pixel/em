@@ -1,14 +1,29 @@
 "use client"
 
+import { useEffect, useRef } from "react"
+
 export function CodeBackground() {
+  const videoRef = useRef<HTMLVideoElement>(null)
+
+  useEffect(() => {
+    // Ensure video plays on component mount
+    if (videoRef.current) {
+      videoRef.current.play().catch((error) => {
+        console.log("Video autoplay prevented:", error)
+      })
+    }
+  }, [])
+
   return (
     <div className="fixed inset-0 w-full h-full pointer-events-none overflow-hidden">
       {/* User's uploaded video background */}
       <video 
+        ref={videoRef}
         autoPlay 
         loop 
         muted 
-        playsInline 
+        playsInline
+        preload="auto"
         className="absolute inset-0 w-full h-full object-cover opacity-30"
       >
         <source src="https://customer-assets.emergentagent.com/job_1215c7b6-2b8a-4bbc-9193-b67c01d86604/artifacts/sh6lbx3r_c1.mp4" type="video/mp4" />
