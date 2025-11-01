@@ -1,3 +1,4 @@
+<img width="1322" height="1823" alt="image" src="https://github.com/user-attachments/assets/acc7ef08-c2c2-4858-96da-dc745b604121" />
 # EmergentX: The AI Co-Founder Workspace
 
 EmergentX is an agentic AI ecosystem that simulates an entire startup team inside your browser. Users interact with a team of intelligent agents—a CEO, Engineer, Designer, and Marketer—that collaborate in real-time to turn a single prompt into a fully realized startup concept, complete with a strategy and brand identity.
